@@ -46,6 +46,7 @@ def follow_page_followers(pagename, n):
 		#ONCE YOU FOLLOW N NUMBER OF PEOPLE IT CLOSES
 		if count == n:
 			browser.quit()
+			break
 		else:
 			try:
 				#CLICKS FOLLOW ON A USER YOU ARE NOT FOLLOWING
