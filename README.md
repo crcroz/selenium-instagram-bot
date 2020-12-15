@@ -10,4 +10,4 @@ I was unable to get InstaPy to work for me, so after a lot of struggling, I deci
 * Because of this it does look a little strange when you watch it work, rest assured, it does work.
 
 
-I appreciate any feedback and hope this helps even 1 person in their own project-cheers!
+I appreciate any feedback -peace!
