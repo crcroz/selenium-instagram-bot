@@ -66,6 +66,8 @@ def follow_page_followers(pagename, n):
 				#THIS IS THE HTML CLASS FOR THE 'FOLLOW' BUTTON
 				follow = browser.find_element_by_class_name('sqdOP.L3NKy.y3zKF')
 				follow.click()
+				#ADDING A TEN SECOND SLEEP SO IT APPEARS MORE HUMAN AND DOES NOT CLICK THE FOLLOW BUTTON TWICE
+				time.sleep(10)
 				count+=1
 				print(f'followed someone {count}')
 				try:
@@ -88,15 +90,16 @@ def follow_page_followers(pagename, n):
 				    scroll += 1
 
 while True:		    
-	#THIS HERE FOLLOWS 20 PEOPLE FROM EACH PAGE EVERY HOUR
+	#THIS HERE FOLLOWS 20 PEOPLE FROM EACH PAGE EVERY 90 mins
 	#THIS IS A SAFE LIMIT SO YOU ARE NOT LIMITED BY INSTAGRAM
 
 	''' IN THIS CASE, I WILL PUT IN THREE SEPERATE ACCOUNTS AND FOLLOW 20 USERS FROM EACH TARGET ACCOUNT
-		YOU CAN DO THIS FOR AS MANY ACCOUNTS AS YOU WOULD LIKE SO LONG AS YOU ONLY TOTAL UP TO 60 PER HOUR'''
+		YOU CAN DO THIS FOR AS MANY ACCOUNTS AS YOU WOULD LIKE SO LONG AS YOU ONLY TOTAL UP TO 60 PER 90 mins'''
 
 	x = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
 	y = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
 	z = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
 	
-	#SLEEP FOR 1 HOUR
+	#SLEEP FOR 90 mins
 	time.sleep(3600)
+	time.sleep(1800)
