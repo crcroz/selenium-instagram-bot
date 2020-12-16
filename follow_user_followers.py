@@ -43,7 +43,7 @@ def follow_page_followers(pagename, n):
 	search.send_keys(pagename)
 	time.sleep(1)
 
-	#THIS IS THE HTML CLASS FOR THE FIRST OPTION THAT POPS IP
+	#THIS IS THE HTML CLASS FOR THE FIRST OPTION THAT POPS UP
 	page = browser.find_element_by_class_name('z556c')
 	page.click()
 	time.sleep(2)
