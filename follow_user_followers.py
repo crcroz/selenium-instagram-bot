@@ -66,8 +66,9 @@ def follow_page_followers(pagename, n):
 				#THIS IS THE HTML CLASS FOR THE 'FOLLOW' BUTTON
 				follow = browser.find_element_by_class_name('sqdOP.L3NKy.y3zKF')
 				follow.click()
-				#ADDING A TEN SECOND SLEEP SO IT APPEARS MORE HUMAN AND DOES NOT CLICK THE FOLLOW BUTTON TWICE
-				time.sleep(10)
+				#ADDING A 90 SECOND SLEEP SO IT APPEARS MORE HUMAN AND DOES NOT CLICK THE FOLLOW BUTTON TWICE
+				#CHANGED IT TO 90 FROM 10 BECAUSE IT HELPS THE BOT LOOK MORE HUMAN AND DOES NOT GET LIMITED
+				time.sleep(90)
 				count+=1
 				print(f'followed someone {count}')
 				try:
@@ -90,16 +91,17 @@ def follow_page_followers(pagename, n):
 				    scroll += 1
 
 while True:		    
-	#THIS HERE FOLLOWS 20 PEOPLE FROM EACH PAGE EVERY 90 mins
-	#THIS IS A SAFE LIMIT SO YOU ARE NOT LIMITED BY INSTAGRAM
-
-	''' IN THIS CASE, I WILL PUT IN THREE SEPERATE ACCOUNTS AND FOLLOW 20 USERS FROM EACH TARGET ACCOUNT
-		YOU CAN DO THIS FOR AS MANY ACCOUNTS AS YOU WOULD LIKE SO LONG AS YOU ONLY TOTAL UP TO 60 PER 90 mins'''
+	
+	#THIS IS WHERE YOU CHOOSE WHAT PAGES TO FOLLOW FROM AND HOW MANY OF THEIR FOLLOWERS YOU WISH TO FOLLOW
 
 	x = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
+	time.sleep(600)
 	y = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
+	time.sleep(600)
 	z = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
+	time.sleep(600)
 	
-	#SLEEP FOR 90 mins
-	time.sleep(3600)
-	time.sleep(1800)
+	
+	''' I have found that by adding the 90 second sleep between following people and ALSO adding a 600 second sleep between switching pages is the safest route.
+	    Don't worry. It's still very effective and has helped me grow my instagram quickly.
+	'''
