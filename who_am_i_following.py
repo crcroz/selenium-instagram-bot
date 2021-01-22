@@ -3,7 +3,7 @@ from selenium.webdriver.firefox.options import Options
 import time
 import random
 
-def who_follows_me():
+def who_am_i_following():
 	#OPENS INSTAGRAM
 	#INPUT YOUR PATH TO FIREFOX.EXE
 	binary = r'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
