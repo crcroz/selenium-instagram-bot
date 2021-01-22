@@ -42,7 +42,18 @@ I was unable to get InstaPy to work for me, so after a lot of struggling, I deci
   ### Last Thing
     Hopefully this goes without saying at this point, you cannot let this bot follow 3,000 people in one day. Instagram would probably shut down your account.
     
+ # Selenium Bot to Unfollow Users Who Are Not Following You
+  * First: Make sure you have both the who_follows_me and who_am_i_following scripts downloaded
+  * Second: Run the Purge
   
+  It works by simply getting your followers and getting who you are following.
+  Then turns that into the accounts that are not following you back.
+  It goes to each user page individually and unfollows them 1 by 1.
+  
+  ## Notes on the Purge
+  You can only unfollow about 150 pages per day which is what the code is set to stop at.
+  If you do get limited, you may be banned from unfollowing people for a few days.
+  This has happened to me a few times which is why I slowed it down so much.
   
   
   
