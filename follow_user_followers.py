@@ -95,17 +95,26 @@ def follow_page_followers(pagename, n):
 				    browser.execute_script('arguments[0].scrollTop = arguments[0].scrollTop + arguments[0].offsetHeight;', fBody)
 				    time.sleep(2)
 				    scroll += 1
-
+loop = 0
 while True:		    
 	
 	#THIS IS WHERE YOU CHOOSE WHAT PAGES TO FOLLOW FROM AND HOW MANY OF THEIR FOLLOWERS YOU WISH TO FOLLOW
-
+	
+	#THE PAGE NAME THAT YOU ENTER HAS TO BE EXACTLY THE SAME AS THE TARGET USERS INSTA HANDLE
+	
 	x = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
 	time.sleep(600)
 	y = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
 	time.sleep(600)
 	z = follow_page_followers(pagename = 'name of page you wish to follow their users', n = 20)
 	time.sleep(600)
+	
+	#PRINTS THE LOOP COUNT SO I CAN EASILY KEEP TRACK OF HOW MANY TIMES IT HAS RAN
+	loop += 1
+	print('')
+	print("loop number = " + str(loop))
+	print('')
+
 	
 	
 	''' I have found that by adding the 90 second sleep between following people and ALSO adding a 600 second sleep AFTER following from all pages is the safest route.
