@@ -1,6 +1,7 @@
 # Selenium Bot to Follow a Users Followers
 
-I was unable to get InstaPy to work for me, so after a lot of struggling, I decided to make selenium work for me. It worked quite nicely.
+I was unable to get InstaPy to work for me, so after a lot of struggling, I decided to make selenium work for me. It worked quite nicely. It works decently
+
 
 ### The Basics of How It Works
 
