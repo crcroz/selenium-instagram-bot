@@ -6,10 +6,13 @@ import time
 def follow_page_followers(pagename, n):
 	#####OPENS INSTAGRAM
 	#INPUT YOUR PATH TO FIREFOX.EXE
+	#THIS PATH FOR ME LOOKS LIKE THIS: 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
 	binary = r'your path to firefox.exe'
 	options = Options()
 	options.binary = binary
+	
 	#INPUT YOUR PATH TO WEBDRIVER/ IN THIS CASE GECKODRIVER
+	#FOR ME THIS LOOKS LIKE: "C:\\Users\\my user name\\Desktop\\gecko\\geckodriver.exe"
 	browser = webdriver.Firefox(firefox_options=options, executable_path="your path")
 	browser.implicitly_wait(5)
 	browser.get('http://instagram.com/')
@@ -17,6 +20,8 @@ def follow_page_followers(pagename, n):
 	#####LOGS IN AND GETS YOU PAST THE 'SAVE PASSWORD' AND 'TURN ON NOTIFICATIONS' PROMPTS
 	username_input = browser.find_element_by_css_selector("input[name='username']")
 	password_input = browser.find_element_by_css_selector("input[name='password']")
+	
+	#INPUT YOUR USERNAME AND PASSWORD BELOW
 	username_input.send_keys("your username")
 	password_input.send_keys("your password")
 
@@ -58,6 +63,7 @@ def follow_page_followers(pagename, n):
 	while count<=n:
 		#ONCE YOU FOLLOW N NUMBER OF PEOPLE IT CLOSES
 		if count == n:
+			#BROWSER.QUIT IS THE FUNCTION THAT CLOSES THE WEBPAGE
 			browser.quit()
 			break
 		else:
@@ -66,8 +72,8 @@ def follow_page_followers(pagename, n):
 				#THIS IS THE HTML CLASS FOR THE 'FOLLOW' BUTTON
 				follow = browser.find_element_by_class_name('sqdOP.L3NKy.y3zKF')
 				follow.click()
-				#ADDING A 90 SECOND SLEEP SO IT APPEARS MORE HUMAN AND DOES NOT CLICK THE FOLLOW BUTTON TWICE
-				#CHANGED IT TO 90 FROM 10 BECAUSE IT HELPS THE BOT LOOK MORE HUMAN AND DOES NOT GET LIMITED
+				
+				#CHANGED IT TO 90 SECONDS FROM 10 BECAUSE IT HELPS THE BOT LOOK MORE HUMAN AND DOES NOT GET LIMITED
 				time.sleep(90)
 				count+=1
 				print(f'followed someone {count}')
@@ -102,6 +108,6 @@ while True:
 	time.sleep(600)
 	
 	
-	''' I have found that by adding the 90 second sleep between following people and ALSO adding a 600 second sleep between switching pages is the safest route.
+	''' I have found that by adding the 90 second sleep between following people and ALSO adding a 600 second sleep AFTER following from all pages is the safest route.
 	    Don't worry. It's still very effective and has helped me grow my instagram quickly.
 	'''
